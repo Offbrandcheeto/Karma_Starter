@@ -162,7 +162,7 @@ nav {
   }
 
   .nav-item:first-child {
-    border-top: 2px solid #fff;
+    border-top: none;
   }
 
   .nav-link:hover,
