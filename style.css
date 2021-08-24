@@ -142,6 +142,25 @@ nav {
   margin-top: 1.5rem;
 }
 
+.grid {
+  height: 100%;
+  padding: 1rem;
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #fff;
+  padding: 4rem 0;
+}
+
 /* Responsive */
 
 @media (max-width: 768px) {
@@ -198,5 +217,20 @@ nav {
 
   .first {
     height: 100% !important;
+  }
+
+  /* grid */
+
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    padding: 0;
+  }
+
+  .item {
+    height: 100vh;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
   }
 }
