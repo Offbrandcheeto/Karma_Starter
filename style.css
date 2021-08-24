@@ -22,7 +22,6 @@ body {
 }
 
 /* Navbar */
-
 nav {
   display: flex;
   height: 10vh;
@@ -51,7 +50,6 @@ nav {
 }
 
 /* Main */
-
 .first {
   height: 90vh !important;
 }
@@ -66,7 +64,6 @@ nav {
 }
 
 /* Full */
-
 .full {
   display: flex;
   flex-direction: column;
@@ -78,7 +75,6 @@ nav {
 }
 
 /* Wrappers */
-
 .wrapper {
   width: 90%;
   max-width: 750px;
@@ -90,7 +86,6 @@ nav {
 }
 
 /* Text & Headings */
-
 .main-heading {
   font-size: 3rem;
   letter-spacing: 1px;
@@ -103,25 +98,37 @@ nav {
 }
 
 /* Button */
-
 .btn {
   position: relative;
   display: inline-block;
-  color: #fff;
-  padding: 1rem 1.25rem;
-  margin-top: 0.5rem;
+  color: var(--text-color);
   font-size: 1.5rem;
+  padding: 1.25rem 1.75rem;
+  margin-top: 1rem;
   text-decoration: none;
-  border: 2px solid var(--text-color);
-  transition: border-radius 0.4s ease-in-out;
 }
 
-.btn:hover {
-  border-radius: 1rem;
+.btn:after,
+.btn:before {
+  content: '';
+  border: 3px solid var(--text-color);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.btn:hover:after {
+  transform: translate(-5px, -5px);
+}
+
+.btn:hover::before {
+  transform: translate(5px, 5px);
 }
 
 /* Utilities */
-
 .current {
   color: var(--dark-color);
 }
@@ -136,10 +143,6 @@ nav {
 
 .left {
   text-align: left;
-}
-
-.m {
-  margin-top: 1.5rem;
 }
 
 .grid {
@@ -219,8 +222,7 @@ nav {
     height: 100% !important;
   }
 
-  /* grid */
-
+  /* Grid */
   .grid {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
@@ -232,5 +234,10 @@ nav {
     border-right: none;
     border-left: none;
     border-bottom: none;
+  }
+
+  /* Button */
+  .btn {
+    padding: 1rem 1.5rem;
   }
 }
