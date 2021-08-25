@@ -97,6 +97,11 @@ nav {
   font-size: 1.25rem;
 }
 
+.big-text {
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
 /* Button */
 .btn {
   position: relative;
@@ -145,6 +150,7 @@ nav {
   text-align: left;
 }
 
+/* Grid & Item */
 .grid {
   height: 100%;
   padding: 1rem;
@@ -165,6 +171,21 @@ nav {
 }
 
 /* Responsive */
+@media (max-width: 1200px) {
+  /* Grid */
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    padding: 0;
+  }
+
+  .item {
+    height: 100vh;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+  }
+}
 
 @media (max-width: 768px) {
   /* Navbar */
@@ -220,20 +241,6 @@ nav {
 
   .first {
     height: 100% !important;
-  }
-
-  /* Grid */
-  .grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    padding: 0;
-  }
-
-  .item {
-    height: 100vh;
-    border-right: none;
-    border-left: none;
-    border-bottom: none;
   }
 
   /* Button */
